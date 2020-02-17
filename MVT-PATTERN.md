@@ -58,3 +58,17 @@ urlpatterns = [
 ```
 
 ## View - 로직 정의
+
+- 일반적으로 웹 요청을 받아서 데이터베이스 접속 등 해당 애플리케이션의 로직에 맞는 처리를 하고, 그 결과 데이터를 HTML 로 변환하기 위하여 템플릿 처리를 한 후에, 최종 HTML로 된 응답 데이터를 웹 클라이언트로 반환하는 역할을 한다.
+
+```
+from django.http import HttpResponse
+import datetime
+
+def current_datetime(request) :
+    now = datetime.new()
+    html = "<html><body>It is now %s.</body></html>" % now
+
+    return HttpResponse(html)
+
+```
