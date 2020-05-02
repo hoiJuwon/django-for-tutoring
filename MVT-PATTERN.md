@@ -72,3 +72,5 @@ def current_datetime(request) :
     return HttpResponse(html)
 
 ```
+
+- View 의 함수는 첫 번째 인자로 HttpRequest 객체를 받는다. 그리고 필요한 처리를 한 후에 최종적으로 HttpResponse 객체를 반환한다.
